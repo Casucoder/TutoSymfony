@@ -1,0 +1,27 @@
+{# src/BGG/BetBundle/Resources/views/Home/edit.html.twig #}
+
+{% extends "BGGBetBundle::layout.html.twig" %}
+
+{% block title %}
+    Modifier une annonce - {{ parent() }}
+{% endblock %}
+
+{% block bggbet_body %}
+
+    <h2>Modifier une annonce</h2>
+
+    {{ include("BGGBetBundle:Home:form.html.twig") }}
+
+    <p>
+        Vous éditez une annonce déjà existante, merci de ne pas changer
+        l'esprit générale de l'annonce déjà publiée.
+    </p>
+
+    <p>
+        <a href="{{ path('bgg_bet_view', {'id': advert.id}) }}" class="btn btn-default">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+            Retour à l'annonce
+        </a>
+    </p>
+
+{% endblock %}

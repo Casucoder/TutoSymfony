@@ -1,0 +1,27 @@
+{# src/BGG/BetBundle/Resources/views/Home/add.html.twig #}
+
+{% extends "BGGBetBundle::layout.html.twig" %}
+
+{% block title %}
+    Ajouter une annonce - {{ parent() }}
+{% endblock %}
+
+{% block bggbet_body %}
+
+    <h2>Ajouter une annonce</h2>
+
+    {{ include("BGGBetBundle:Home:form.html.twig") }}
+
+    <p>
+        Attention : cette annonce sera ajoutée directement
+        sur la page d'accueil après validation du formulaire.
+    </p>
+
+    {#<p>#}
+        {#<a href="{{ path('bgg_bet_view', {'id': advert.id}) }}" class="btn btn-default">#}
+            {#<i class="glyphicon glyphicon-chevron-left"></i>#}
+            {#Retour à l'annonce#}
+        {#</a>#}
+    {#</p>#}
+
+{% endblock %}

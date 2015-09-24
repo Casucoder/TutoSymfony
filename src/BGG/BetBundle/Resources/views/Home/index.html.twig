@@ -1,0 +1,27 @@
+{# src/BGG/BetBundle/Resources/views/Home/index.html.twig #}
+
+{% extends "BGGBetBundle::layout.html.twig" %}
+
+{% block title %}
+    Accueil - {{ parent() }}
+{% endblock %}
+
+{% block bggbet_body %}
+
+    <h2>Liste des annonces</h2>
+
+    <ul>
+        {% for advert in listAdverts %}
+            <li>
+                <a href="{{ path('bgg_bet_view', {'id': advert.id}) }}">
+                    {{ advert.title }}
+                </a>
+                par {{ advert.author }},
+                le {{ advert.date|date('d/m/Y') }}
+            </li>
+        {% else %}
+            <li>Pas (encore !) d'annonces</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+# src/BGG/BetBundle/Resources/config/routing.yml
+
+bgg_bet_home:
+    path:      /{page}
+    defaults:  { _controller: BGGBetBundle:Home:index, page: 1 }
+    requirements:
+        page: \d*
+bgg_bet_view:
+    path:      /view/{id}
+    defaults:  { _controller: BGGBetBundle:Home:view }
+    requirements:
+        id: \d+
+bgg_bet_add:
+    path:      /add
+    defaults:  { _controller: BGGBetBundle:Home:add }
+bgg_bet_edit:
+    path:      /edit/{id}
+    defaults:  { _controller: BGGBetBundle:Home:edit }
+    requirements:
+        id: \d+
+bgg_bet_delete:
+    path:      /delete/{id}
+    defaults:  { _controller: BGGBetBundle:Home:delete }
+    requirements:
+        id: \d+

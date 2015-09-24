@@ -1,0 +1,7 @@
+bgg_bet:
+    resource: "@BGGBetBundle/Resources/config/routing.yml"
+    prefix:   /bet
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
